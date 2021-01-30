@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PreviewService } from '../services/preview.service';
+import { PreviewService } from '../../services/preview.service';
 import { Router } from '@angular/router';
 
 @Component({

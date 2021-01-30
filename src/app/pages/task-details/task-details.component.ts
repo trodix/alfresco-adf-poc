@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FormRenderingService } from '@alfresco/adf-core';
-import { CustomEditorComponent } from '../stencils.module';
-import { PreviewService } from '../services/preview.service';
+import { CustomEditorComponent } from '../../stencils.module';
+import { PreviewService } from '../../services/preview.service';
 
 @Component({
   selector: 'app-task-details',

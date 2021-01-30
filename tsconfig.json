@@ -10,6 +10,9 @@
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "noUnusedLocals": false,
+    "strict": false,
+    "strictPropertyInitialization": false,
+    "strictNullChecks": false,
     "target": "es2015",
     "typeRoots": [
       "node_modules/@types"
@@ -18,7 +21,7 @@
       "es2016",
       "dom"
     ],
-    "module": "es2015"
+    "module": "es2015",
   },
   "angularCompilerOptions": {
     "preserveWhitespaces": false

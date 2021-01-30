@@ -17,9 +17,9 @@
   "private": true,
   "dependencies": {
     "@alfresco/adf-content-services": "4.2.0",
-    "@alfresco/adf-process-services": "4.2.0",
     "@alfresco/adf-core": "4.2.0",
     "@alfresco/adf-extensions": "4.2.0",
+    "@alfresco/adf-process-services": "4.2.0",
     "@alfresco/js-api": "4.2.0",
     "@angular/animations": "10.0.6",
     "@angular/cdk": "10.0.2",
@@ -36,7 +36,7 @@
     "@mat-datetimepicker/core": "^4.1.0",
     "@mat-datetimepicker/moment": "^4.1.0",
     "@ngx-translate/core": "^13.0.0",
-    "chart.js": "2.5.0",
+    "chart.js": "2.9.4",
     "classlist.js": "1.1.20150312",
     "core-js": "^2.5.4",
     "custom-event-polyfill": "0.3.0",
@@ -48,7 +48,7 @@
     "pdfjs-dist": "^2.0.489",
     "raphael": "2.2.7",
     "reflect-metadata": "0.1.10",
-    "rxjs": "^6.6.0",
+    "rxjs": "^6.6.6",
     "systemjs": "0.19.27",
     "web-animations-js": "2.3.1",
     "zone.js": "^0.10.3"

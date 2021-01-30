@@ -13,7 +13,7 @@ export class AppComponent {
   constructor(translationService: TranslationService,
               private authService: AuthenticationService,
               private router: Router) {
-    translationService.use('en');
+    translationService.use('fr');
   }
 
   logout() {

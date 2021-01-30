@@ -1,0 +1,134 @@
+<adf-toolbar>
+  <adf-toolbar-title>
+    <adf-breadcrumb
+      class="files-breadcrumb"
+      root="Personal Files"
+      [target]="documentList"
+      [folderNode]="documentList.folderNode"
+    >
+    </adf-breadcrumb>
+  </adf-toolbar-title>
+
+  <div class="adf-toolbar--spacer"></div>
+
+  <adf-upload-button
+    [rootFolderId]="documentList.currentFolderId || '-root-'"
+    [adf-check-allowable-operation]="'create'"
+    (success)="uploadSuccess($event)"
+  >
+  </adf-upload-button>
+</adf-toolbar>
+
+<adf-document-list
+  #documentList
+  currentFolderId="-root-"
+  [contextMenuActions]="true"
+  [contentActions]="true"
+  (preview)="showPreview($event)"
+>
+  >
+  <!-- Folder actions -->
+  <content-actions>
+    <content-action
+      title="Copy"
+      [icon]="'content_copy'"
+      [target]="'folder'"
+      [handler]="'copy'"
+      permission="update"
+      [disableWithNoPermission]="true"
+      (error)="onContentActionError($event)"
+      (success)="onContentActionSuccess($event)"
+    >
+    </content-action>
+    <content-action
+      title="Move"
+      [icon]="'redo'"
+      [target]="'folder'"
+      [handler]="'move'"
+      permission="update"
+      [disableWithNoPermission]="true"
+      (error)="onContentActionError($event)"
+      (success)="onContentActionSuccess($event)"
+    >
+    </content-action>
+    <content-action
+      icon="gesture"
+      title="Rename"
+      target="folder"
+      permission="update"
+      [disableWithNoPermission]="true"
+      (execute)="onOpenRenameNodeDialog($event)"
+    >
+    </content-action>
+    <content-action
+      title="Delete"
+      [icon]="'delete'"
+      [target]="'folder'"
+      [handler]="'delete'"
+      permission="update"
+      [disableWithNoPermission]="true"
+      (execute)="onOpenRemoveNodeDialog($event)"
+    >
+    </content-action>
+    <!-- File actions -->
+    <content-action
+      title="Download"
+      [icon]="'download'"
+      [target]="'document'"
+      [handler]="'download'"
+      permission="read"
+      [disableWithNoPermission]="true"
+      (error)="onContentActionError($event)"
+      (success)="onContentActionSuccess($event)"
+    >
+    </content-action>
+    <content-action
+      title="Copy"
+      [icon]="'content_copy'"
+      [target]="'document'"
+      [handler]="'copy'"
+      permission="update"
+      [disableWithNoPermission]="true"
+      (error)="onContentActionError($event)"
+      (success)="onContentActionSuccess($event)"
+    >
+    </content-action>
+    <content-action
+      title="Move"
+      [icon]="'redo'"
+      [target]="'document'"
+      [handler]="'move'"
+      permission="update"
+      [disableWithNoPermission]="true"
+      (error)="onContentActionError($event)"
+      (success)="onContentActionSuccess($event)"
+    >
+    </content-action>
+    <content-action
+      icon="gesture"
+      title="Rename"
+      target="document"
+      permission="update"
+      [disableWithNoPermission]="true"
+      (execute)="onOpenRenameNodeDialog($event)"
+    >
+    </content-action>
+    <content-action
+      title="Delete"
+      [icon]="'delete'"
+      [target]="'document'"
+      permission="delete"
+      [disableWithNoPermission]="true"
+      (execute)="onOpenRemoveNodeDialog($event)"
+    >
+    </content-action>
+  </content-actions>
+</adf-document-list>
+<adf-pagination
+  [target]="documentList"
+  [supportedPageSizes]="[5, 10, 15, 20]"
+  [pagination]="10"
+>
+</adf-pagination>
+
+<adf-file-uploading-dialog></adf-file-uploading-dialog>

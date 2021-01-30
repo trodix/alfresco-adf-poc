@@ -5,7 +5,7 @@ import { ContentModule } from '@alfresco/adf-content-services';
 import { ProcessModule } from '@alfresco/adf-process-services';
 import { CoreModule, TranslateLoaderService, AppConfigService, AppConfigServiceMock } from '@alfresco/adf-core';
 import { DocumentlistComponent } from './documentlist.component';
-import { PreviewService } from '../services/preview.service';
+import { PreviewService } from '../../services/preview.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AlfrescoApiServiceMock, AlfrescoApiService } from '@alfresco/adf-core';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';

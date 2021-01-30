@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>Renommer le document</h2>
+<mat-dialog-content [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Nouveau nom"
+      formControlName="elementName"
+      required
+    />
+    <mat-error *ngIf="form.get('elementName').hasError('required') || form.get('elementName').hasError('minlength')">
+      Au moins 2 caractères
+    </mat-error>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button (click)="onCancel()">Annuler</button>
+  <button mat-raised-button color="primary" [disabled]="hasFormError()" (click)="onSubmit()">
+    Renommer
+  </button>
+</mat-dialog-actions>

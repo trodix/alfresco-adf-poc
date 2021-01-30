@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProcessModule } from '@alfresco/adf-process-services';
 import { CoreModule, TranslateLoaderService, AppConfigService, AppConfigServiceMock } from '@alfresco/adf-core';
 
-import { PreviewService } from '../services/preview.service';
+import { PreviewService } from '../../services/preview.service';
 import { TaskDetailsComponent } from './task-details.component';
 import { AlfrescoApiServiceMock, AlfrescoApiService } from '@alfresco/adf-core';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
