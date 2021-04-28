@@ -52,7 +52,7 @@ export class FileViewComponent implements OnInit {
               }
               this.router.navigate(['/files', id]);
             },
-            () => this.router.navigate(['/files', id])
+            async () => this.router.navigate(['/files', id])
           );
       }
     });

@@ -16,13 +16,13 @@ import { PreviewService } from '../../services/preview.service';
 })
 export class DocumentlistComponent implements OnInit {
 
+  @ViewChild('documentList', { static: true })
+  documentList: DocumentListComponent;
+
   @Input()
   showViewer = false;
 
   nodeId: string = null;
-
-  @ViewChild('documentList', { static: true })
-  documentList: DocumentListComponent;
 
   constructor(
     private notificationService: NotificationService,

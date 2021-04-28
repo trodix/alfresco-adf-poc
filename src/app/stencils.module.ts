@@ -1,4 +1,4 @@
-/* tslint:disable */
+/* eslint-disable */
 
 import { Component, NgModule } from '@angular/core';
 import { WidgetComponent } from '@alfresco/adf-core';

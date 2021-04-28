@@ -1,7 +1,7 @@
 import { browser, by, element } from 'protractor';
 
 export class AdfAppPage {
-  navigateTo() {
+  async navigateTo() {
     return browser.get('/');
   }
 
